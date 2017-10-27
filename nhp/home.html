@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Nguyễn Hà Phương</title>
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
+	<link href="css/lightbox.css" rel="stylesheet">
+	<script src="js/lightbox.js"></script>
+	<link rel="shortcut icon" type="image/png" href="img/favicon.png">
+</head>
+<body>
+<button onclick="topFunction()" id="myBtn" title="Go to top"><i class="fa fa-arrow-circle-o-up fa-4x" aria-hidden="true"></i></button>
+
+<script>
+
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+        document.getElementById("myBtn").style.display = "block";
+    } else {
+        document.getElementById("myBtn").style.display = "none";
+    }
+}
+
+function topFunction() {
+    document.body.scrollTop = 0;
+    document.documentElement.scrollTop = 0;
+}
+
+$(function() {
+
+    $('.tab-panels .tabs li').on('click', function() {
+
+        var $panel = $(this).closest('.tab-panels');
+
+        $panel.find('.tabs li.active').removeClass('active');
+        $(this).addClass('active');
+
+        //figure out which panel to show
+        var panelToShow = $(this).attr('rel');
+
+        //hide current panel
+        $panel.find('.panel.active').slideUp(300, showNextPanel);
+
+        //show next panel
+        function showNextPanel() {
+            $(this).removeClass('active');
+
+            $('#'+panelToShow).slideDown(300, function() {
+                $(this).addClass('active');
+            });
+        }
+    });
+
+
+});
+</script>
+
+<div id="header">
+	<div class="con">
+		<div class="nav">
+			<a href=""><img class="logo" src="img/logo.png"></a>
+			<ul>
+				<a href="#"><li>home</li></a>
+				<a href="#bg1"><li>about</li></a>
+				<a href="#bg2"><li>portfolio</li></a>
+				<a href="#bg3"><li>contact</li></a>
+			</ul>
+		</div>
+		<div class="greeting">
+			<h1>welcome to my world</h1>
+			<div class="vl"></div>
+			<div class="p1"><p>My name is Phuong - a weirdo with a big dream of becoming a Graphic Designer/ Photograher. In case you are interested in making my dream come true, this is my portfolio to show you who I am and what I am capable of.</p>
+			<a href="#footer"><button>More. More. MORE.</button></a></div>
+		</div>
+	</div>
+</div>
+<div id="bg1">
+	<div class="con">
+		<div class="aboutme">
+			<h2>about me</h2>
+			<div class="about">
+				<table class="info">
+					<tr>
+						<th>Full Name:</th>
+						<td>Nguyễn Hà Phương</td>
+					</tr>
+					<tr>
+						<th>D.o.B:</th>
+						<td>11-26-1998</td>
+					</tr>
+					<tr>
+						<th>Education</th>
+						<td>
+							<ul>
+								<li>Arena Multimedia</li>
+								<li>National Economics University</li>
+							</ul>
+						</td>
+					</tr>
+				</table>
+				<div class="ava"><img src="img/ava.jpg"></div>
+			</div>
+		</div>
+		<div class="exp">
+			<h2>experience</h2>
+			<p>Graphic Designer/ Product Photographer at La Beauté</p>
+		</div>
+		<div class="skills">
+			<h2>skills</h2>
+			<div class="c4">
+				<div class="cot1">
+					<div class="skillicon"><img src="img/photo-camera.png"></div>
+					<div class="per">
+						<div class="solid1"></div>
+					</div>
+				</div>
+				<div class="cot">
+					<div class="skillicon"><img src="img/illustrator.png"></div>
+					<div class="per">
+						<div class="solid2"></div>
+						
+					</div>
+				</div>
+				<div class="cot">
+					<div class="skillicon"><img src="img/photoshop.png"></div>
+					<div class="per">
+						<div class="solid3"></div>
+						
+					</div>
+				</div>
+				<div class="cot">
+					<div class="skillicon"><img src="img/after-effects.png"></div>
+					<div class="per">
+						<div class="solid4"></div>
+						
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<div id="bg2">
+	<div class="con">
+		<div class="portfolio">
+			<h2>portfolio</h2>
+			<div class="tab-panels">
+				<ul class="tabs">
+					<li rel="panel1" class="active">all</li>
+					<li rel="panel2">graphic design</li>
+					<li rel="panel3">photography</li>
+					<li rel="panel4">animation</li>
+				</ul>
+
+				<div class="panel active" id="panel1">
+					<div class="anh"><a href="img/lens.jpg" data-lightbox="image-1" data-title="Mah Lens"><img src="images/lens.jpg"></a></div>
+					<div class="anh ma"><a href="img/tropical.png" data-lightbox="image-1" data-title="Random Tropical Theme Stuffs"><img src="images/tropical.png"></a></div>
+					<div class="anh"><a href="img/whale.png" data-lightbox="image-1" data-title="Whale... Whale... Look who's here?"><img src="images/whale.png"></a></div>
+					<div class="anh"><a href="img/smoking.png" data-lightbox="image-1" data-title="Smokin' ̶h̶o̶t̶ kills"><img src="images/smoking.png"></a></div>
+					<div class="anh ma"><a href="img/fire.gif" data-lightbox="image-1" data-title="Ooh Hot Hot HOT"><img src="images/fire.gif"></a></div>
+					<div class="anh"><a href="img/butterfly.jpg" data-lightbox="image-1" data-title="Winged Maggot"><img src="images/butterfly.jpg"></a></div>
+				</div>
+				<div class="panel" id="panel2">
+					<div class="anh"><a href="img/whale.png" data-lightbox="gd" data-title="Whale... Whale... Look who's here?"><img src="images/whale.png"></a></div>
+					<div class="anh ma"><a href="img/smoking.png" data-lightbox="gd" data-title="Smokin' ̶h̶o̶t̶ kills"><img src="images/smoking.png"></a></div>
+					<div class="anh"><a href="img/boy.jpg" data-lightbox="gd" data-title="The Boy Who Lived"><img src="images/boy.jpg"></a></div>
+					<div class="anh"><a href="img/coffee.png" data-lightbox="gd" data-title="Coffee Search"><img src="images/coffee.png"></a></div>
+					<div class="anh ma"><a href="img/skull.png" data-lightbox="gd" data-title="Deadly Cute"><img src="images/skull.png"></a></div>
+					<div class="anh"><a href="img/tropical.png" data-lightbox="gd" data-title="Random Tropical Theme Stuffs"><img src="images/tropical.png"></a></div>
+				</div>
+				<div class="panel" id="panel3">
+					<div class="anh"><a href="img/butterfly.jpg" data-lightbox="ph" data-title="Winged Maggot"><img src="images/butterfly.jpg"></a></div>
+					<div class="anh ma"><a href="img/cloud.jpg" data-lightbox="ph" data-title="Floating Cotton Candy"><img src="images/cloud.jpg"></a></div>
+					<div class="anh"><a href="img/hand.jpg" data-lightbox="ph" data-title="Work work work work work"><img src="images/hand.jpg"></a></div>
+					<div class="anh"><a href="img/drop.jpg" data-lightbox="ph" data-title="Took me FOREVER to capture this"><img src="images/drop.jpg"></a></div>
+					<div class="anh ma"><a href="img/lens.jpg" data-lightbox="ph" data-title="Mah Lens"><img src="images/lens.jpg"></a></div>
+					<div class="anh"><a href="img/rain.jpg" data-lightbox="ph" data-title="Moody AF"><img src="images/rain.jpg"></a></div>
+				</div>
+				<div class="panel" id="panel4">
+					<div class="anh"><a href="img/living.gif" data-lightbox="ani" data-title="Living = Lovong"><img src="images/living.gif"></a></div>
+					<div class="anh ma"><a href="img/fire.gif" data-lightbox="ani" data-title="Ooh Hot Hot HOT"><img src="images/fire.gif"></a></div>
+					<div class="anh"><a href="img/face.gif" data-lightbox="ani" data-title="Rainbow Up"><img src="images/face.gif"></a></div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<div id="bg3">
+	<div class="con">
+		<div class="contact">
+			<h2>contact</h2>
+			<div>
+				<div class="box">
+					<i class="fa fa-phone fa-2x icon" aria-hidden="true"></i>
+					<p>(+84) 0167-983-4761</p>
+				</div>
+				<div class="box">
+					<i class="fa fa-envelope-o fa-2x icon" aria-hidden="true"></i>
+					<p>nhphuong2611@gmail.com</p>
+				</div>
+			</div>
+		</div>
+		<div class="msg">
+			<h2>send me a message</h2>
+			<form>
+				<input type="text" name="name" class="input1" placeholder="Your Name">
+				<input type="email" name="email" class="input2" placeholder="Your Email">
+				<textarea placeholder="Write something..."></textarea>
+				<button class="but1">SEND</button>
+				<button type="reset" class="but2">RESET</button>
+			</form>
+		</div>
+	</div>
+</div>
+<div id="footer">
+	<div class="con">
+		<div class="ic">
+			<a href="https://www.facebook.com/nhphuong2611"><i class="fa fa-facebook-official fa-5x" aria-hidden="true"></i></a>
+			<a href="https://www.instagram.com/nhphuong2611/"><i class="fa fa-instagram fa-5x ctr" aria-hidden="true"></i></a>
+			<a href="https://www.youtube.com/channel/UCkfuBGfcP98v16zIBwSE7pw?view_as=subscriber"><i class="fa fa-youtube-play fa-5x" aria-hidden="true"></i></a>
+		</div>
+		<p>@2017 Nguyễn Hà Phương</p>
+	</div>
+</div>
+</body>
+</html>
