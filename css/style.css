@@ -28,7 +28,7 @@ body{
 }
 
 #header{
-	width: 100vw;
+	width: 1330px;
 	height: 100vh;
 	background: url(../img/header.png);
 	background-repeat: no-repeat;
