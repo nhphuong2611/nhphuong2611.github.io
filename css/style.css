@@ -28,7 +28,7 @@ body{
 }
 
 #header{
-	width: 1330px;
+	width: 1920px;
 	height: 700px;
 	background: url(../img/header.png);
 	background-repeat: no-repeat;
@@ -470,7 +470,7 @@ body{
 }
 
 #footer{
-	width: 1330px;
+	width: 1920px;
 	height: 390px;
 	background: url(../img/footer.png);
 	background-repeat: no-repeat;
