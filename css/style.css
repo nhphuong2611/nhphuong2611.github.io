@@ -29,11 +29,12 @@ body{
 
 #header{
 	width: 1330px;
-	height: 100vh;
+	height: 700px;
 	background: url(../img/header.png);
 	background-repeat: no-repeat;
 	background-size: 100%;
 	background-position: bottom;
+	over-flow: hidden;
 
 }
 
@@ -469,12 +470,13 @@ body{
 }
 
 #footer{
-	width: 100%;
+	width: 1330px;
 	height: 390px;
 	background: url(../img/footer.png);
 	background-repeat: no-repeat;
 	background-size: 100%;
 	background-position: bottom;
+	over-flow: hidden;
 }
 
 #footer .ic{
