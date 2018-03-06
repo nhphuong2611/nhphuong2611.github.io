@@ -7,8 +7,6 @@
 
 body{
 	font-family: 'Lato', sans-serif;
-	width:100%;
-	height: 100%;
 }
 
 #myBtn {
@@ -31,14 +29,12 @@ body{
 
 #header{
 	width: 100%;
-	height: 700px;
+	height: 100vh;
 	background: url(../img/header.png);
 	background-repeat: no-repeat;
 	background-size: 100%;
 	background-position: bottom;
-	over-flow: hidden;
-	background-size: cover;
-	display: table;
+
 }
 
 .con{
@@ -168,6 +164,7 @@ body{
 	margin: 30px auto;
 }
 
+
 .about .info{
 	width: 620px;
 	height: 300px;
@@ -197,7 +194,7 @@ body{
 
 .exp{
 	width: 100%;
-	height: 70px;
+	height: 120px;
 	margin: 70px auto;
 	font-size: 24px;
 	line-height: 30px;
@@ -251,25 +248,28 @@ body{
 .skills .solid1{
 	height: 15px;
 	width: 143px;
-	background: #C6BCBD;
+	background: #5D5B66;
+
 }
 
 .skills .solid2{
 	height: 15px;
 	width: 165px;
-	background: #C6BCBD;
+	background: #FBBA27;
+
 }
 
 .skills .solid3{
 	height: 15px;
-	width: 143px;
-	background: #C6BCBD;
+	width: 165px;
+	background: #8BD2FD;
+
 }
 
 .skills .solid4{
 	height: 15px;
 	width: 132px;
-	background: #C6BCBD;
+	background: #EBAAFB;
 }
 
 #bg2{
@@ -292,7 +292,7 @@ body{
 
 .portfolio ul{
 	margin:0;
-	padding: 0
+	padding: 0;
 }
 
 
@@ -359,11 +359,110 @@ body{
 
 #bg3{
 	width: 100%;
+	height: 990px;
+	background: #fff;
+}
+
+#bg3 .project{
+	width: 100%;
 	height: 810px;
+	padding-top: 70px
+}
+
+.project h3{
+	padding-top: 20px;
+	padding-bottom: 15px;
+	color: #888
+}
+
+.project .tab-panels{
+	width: 100%;
+	height: 40px;
+	margin-top: 20px;
+}
+
+.project ul{
+	margin:0;
+	padding: 0;
+}
+
+.project .tabs{
+	width: 800px;
+	height: 40px
+}
+
+.project ul li{
+	text-transform: uppercase;
+	list-style: none;
+	float: left;
+	color: #fff;
+	line-height: 40px;
+	width: 188px;
+	text-align: center;
+	cursor: pointer;
+	display: inline-block;
+	background: #000
+}
+
+
+.project ul li .active{
+	color: #000;
+	background: #ddd;
+	border: none;
+}
+
+.project .tab-panels .panel .active{
+    display:block;
+}
+
+.project .panel{
+	width: 100%;
+	height: 620px;
+	display: none;
+}
+
+
+.project .panel{
+	width: 100%;
+	height: 620px;
+	display: none;
+}
+
+ .project .panel .anh{
+	width: 300px;
+	height: 300px;
+	background: #bbb;
+	float: left;
+	margin-top: 20px;
+	overflow: hidden;
+	cursor: pointer;
+
+}
+
+.project .anh img{
+	height: 300px;
+	margin: auto;
+}
+
+.project .panel .anh:hover{
+	outline: 5px #ddd solid;
+}
+
+.project .panel.active {
+    display:block;
+}
+
+.project .panel .ma{
+	margin: 20px 20px 0 20px;
+}
+
+#bg4{
+	width: 100%;
+	height: 390px;
 	background: #eee
 }
 
-#bg3 .contact{
+#bg4 .contact{
 	width: 100%;
 	height: 230px;
 	padding-top: 70px
@@ -400,12 +499,12 @@ body{
 	float: right;
 }
 
-#bg3 .msg{
+/*#bg4 .msg{
 	width: 100%;
 	height: 350px;
 	margin: 70px auto;
 }
-
+*/
 .msg .input1{
 	width: 370px;
 	height: 40px;
@@ -479,9 +578,6 @@ body{
 	background-repeat: no-repeat;
 	background-size: 100%;
 	background-position: bottom;
-	over-flow: hidden;
-	background-size: cover;
-	display: table;
 }
 
 #footer .ic{
@@ -493,7 +589,7 @@ body{
 }
 
 .ic .ctr{
-	margin: 0 100px 0 100px
+	margin: 0 220px 0 220px
 }
 
 #footer i:hover{
